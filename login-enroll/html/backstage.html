@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+    <link rel="stylesheet" href="../css/backstage.css">
+</head>
+<body>
+  <div class="popUp" style="display: none;" id="escLoad">
+    <div class="popUpin">
+      <img src="../image/tan.png" >
+      <p >您确定要退出登录吗？</p>
+      <div class="yes" id="yesEsc">
+        <p>确定</p>
+      </div>
+      <div class="no" id="noEsc">
+        <p>取消</p>
+      </div>
+    </div>
+    <div class="maskLayer">
+
+    </div>
+</div>
+<div class="popUp" style="display: none;" id="deletePage">
+  <div class="popUpin">
+    <img src="../image/delete.png" >
+    <p >您确定要删除该数据吗？</p>
+    <div class="yes" id="yesDelete" onclick="yesDelete()">
+      <p>确定</p>
+    </div>
+    <div class="no" id="noDelete">
+      <p>取消</p>
+    </div>
+  </div>
+  <div class="maskLayer">
+
+  </div>
+</div>
+    <div class="sidenav">
+        <a href="#contact" id="icon0">&nbsp;&nbsp;首页</a>
+        <button id="icon1" class="dropdown-btn" onclick="openNav()">后台管理
+          <i class="fa fa-caret-down"></i>
+        </button>
+        <div id="myNav" class="overlay">
+          <p href="javascript:void(0)" class="closebtn" onclick="closeNav()"></p>
+          <div class="overlay-content">
+            <a href="#" class="icon" onclick="greens()">&nbsp;&nbsp;菜品管理</a>
+            <a href="#" class="icon" onclick="order()">&nbsp;&nbsp;订单管理</a>
+            <a href="#" class="icon" onclick="user1()">&nbsp;&nbsp;用户管理</a>
+          </div>
+        </div>
+    
+      </div>
+      <div id="mainContent">
+      </div>
+      <script src="https://cdn.bootcdn.net/ajax/libs/jquery/3.6.4/jquery.js"></script>
+      <script type="text/javascript" src="../js/backstage.js"></script> 
+</body>
+</html>

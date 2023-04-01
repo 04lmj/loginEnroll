@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+<meta charset="utf-8" />
+<title>登录</title>
+<link rel="stylesheet" type="text/css" href="../css/login.css" />
+</head>
+
+<body>
+<div class="hint" id="hintPage">
+    <div id="usOrps">
+        账号或者密码错误
+    </div>
+</div>
+<div class="hintNull" id="hintPagenull">
+    <div id="usOrpsnull">
+        账号或密码不能为空
+    </div>
+</div>
+<div class="hintMail" id="hintPagemail">
+    <div id="usOrpsmail">
+        请输入正确的邮箱格式
+    </div>
+</div>
+<img class="bgone" src="../image/1.jpg" />
+<img class="pic" id="image1" src="../image/a.png" />
+
+<div class="table" id="loginPage">
+	<div class="wel">餐厅系统后台登录</div>
+	<div class="wel1"> CAN TING XI TONG HOU TAI DENG LU</div>
+	<div class="user">
+		<div id="icon" ><img src="../image/yhm.png" /></div>
+		<input type="text" id="username" name="" placeholder="请输入用户名" />
+	</div>			
+	<div class="password">
+		<div id="icon"><img src="../image/mm.png" /></div>
+		<input type="password" id="password" name="密码" placeholder="请输入密码"/>
+	</div>
+    <input type="checkbox" id="remember_text"><p id="wordRemeberus">记住账号</p>
+	<button type="button" class="login" onclick="login()">登录</button>
+	<button type="button" class="enroll" onclick="enroll()">注册</button>
+</div>
+<div class="table"  id="enrollPage" >
+	<div class="wel">餐厅系统后台注册</div>
+	<div class="wel1"> CAN TING XI TONG HOU TAI ZHU CE</div>
+	<div class="user1">
+		<div id="icon" ><img src="../image/yhm.png" /></div>
+		<input type="text" id="user1" placeholder="请输入用户名" />
+	</div>			
+	<div class="password1">
+		<div id="icon"><img src="../image/mm.png" /></div>
+		<input type="password" id="password1" placeholder="请输入密码"/>
+	</div>
+	<div class="mail1">
+		<div id="icon"><img src="../image/mail.png" /></div>
+
+		<input type="text" id="mail1" placeholder="请输入邮箱" />
+
+	</div>
+	<div class="code1">
+		<div id="icon"><img src="../image/code.png" /></div>
+
+		<input type="text" id="code1" placeholder="请输入验证码" />
+	</div>
+	<div id="count" >
+		获取验证码
+	</div>
+	<button type="button" class="enroll" onclick="enrollOk()">提交注册</button>
+    <button type="button" id="back" onclick="backLogin()">已有账号?返回登录页面</button>
+</div>
+<script src="https://cdn.bootcdn.net/ajax/libs/jquery/3.6.4/jquery.js"></script>
+
+<script type="text/javascript" src="../js/login.js"></script>
+
+</body>
+</html>

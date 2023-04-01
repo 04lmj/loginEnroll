@@ -1,0 +1,223 @@
+body{
+  width: 100%;
+  height: 100%;
+}
+html{
+  width: 100%;
+  height: 100%;
+}
+*{
+  margin: 0 auto;
+}
+.sidenav {
+    height: 100%;
+    width: 16%;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: rgb(83,128,184);
+    overflow-x: hidden;
+    padding-top: 20px;
+  }
+  /* 设置 sidenav 链接和下拉按钮的样式 */
+  .sidenav a {
+    width: 200px;
+    padding: 6px 0px 6px 0px;
+    text-decoration: none;
+    font-size: 20px;
+    color: white;
+    display: block;
+    border: none;
+    /* width:100%; */
+    text-align: left;
+    cursor: pointer;
+    outline: none;
+  }
+ #icon0:hover{
+  background-color: blue;
+ }
+ #icon1:hover{
+  background-color: blue;
+ }
+  .dropdown-btn{
+  padding: 6px 8px 6px 16px;
+  text-decoration: none;
+  font-size: 20px;
+  color: white;
+  display: block;
+  border: none;
+  background: none;
+  width:100%;
+  text-align: left;
+  cursor: pointer;
+  outline: none;
+  }
+.dropdown-btn::after{
+    content: '';
+		position: absolute;
+		top: 70px;
+		right: 70px;
+		width: 10px;
+		height: 10px;
+		border-right: 1px solid #ccc;
+		border-bottom: 1px solid #ccc;
+		transform: rotate(135deg);
+		transition: all .3s;
+}
+.dropdown-btn:hover::after{
+  transform: rotate(45deg);
+}
+
+.main {
+    margin-left: 200px; 
+    font-size: 20px; 
+    padding: 0px 10px;
+  }
+.active {
+    color: white;
+   
+  }
+.dropdown-container {
+  width: 100%;
+  height: 0%;
+    display: none;
+    padding-left: 8px;
+  }
+.fa-caret-down {
+    float: right;
+    padding-right: 8px;
+  }
+#mainContent{
+  position: absolute;
+  left: 16%;
+  top: 34%;
+  width: 84%;
+  height: 300px;
+  }
+  body {
+    font-family: 'Lato', sans-serif;
+  }
+  .overlay {
+    height: 0%;
+    width: 20%;
+    position: fixed;
+    z-index: 1;
+    top: 56px;
+    left: 0;
+    overflow-y: hidden;
+    transition: 0.5s;
+  }
+  .overlay-content {
+    margin-left: 0px;
+    margin-right: 0px;
+    position: relative;
+    top: 4%;
+    width: 78%;
+    text-align: left;
+    margin-top: 30px;
+  }
+  .overlay a {
+    margin-left: 0px;
+    width: 185px;
+    padding: 8px;
+    text-decoration: none;
+    font-size: 20px;
+    color: white;
+    display: block;
+    transition: 0.3s;
+  }
+  .overlay a:hover{
+    color: #f1f1f1;
+    background-color: blue;
+  }
+  .overlay .closebtn {
+    position: absolute;
+    top: -5px;
+    width: 185px;
+    height: 34px;
+    font-size: 60px;
+  }
+  .popUp{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+   
+}
+.popUp .maskLayer{
+  z-index: 888;
+    position: absolute;
+    opacity: 0.5;
+    width: 100%;
+    height: 100%;
+    background-color: gray;
+}
+.popUp .popUpin{
+  position: absolute;
+  top: 33%;
+  left: 30%;
+  width: 38%;
+  border: 1px solid white;
+  border-radius: 30px;
+  z-index: 999;
+  height: 33%;
+  background-color: white;
+  /* margin: 0 auto; */
+  display: flex;
+  justify-content: center;
+}
+.popUpin img{
+  
+  margin-top: 15px;
+  margin-right: 0px;
+    margin-left: 0px;
+  width: 54px;
+  height: 54px;
+  object-fit: cover;
+
+}
+.popUpin p{
+  margin-top: 15px;
+  margin-right: 0px;
+    margin-left: 0px;
+  font-size: 37px;
+  z-index: 999;
+  color: black;
+}
+.yes{
+  z-index: 1000;
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  left: 20%;
+  width: 111px;
+  height: 60px;
+  background-color: skyblue;
+  border: 2px solid blue;
+  border-radius: 17px;
+}
+.no{
+  z-index: 1000;
+
+  cursor: pointer;
+  width: 111px;
+  height: 60px;
+  border-radius: 17px;
+  background-color: lightcoral;
+  border: 2px solid red;
+  position: absolute;
+  top: 50%;
+  left: 58%;
+}
+.yes p{
+  text-align: center;
+    color: white;
+    font-size: 31px;
+    line-height: 27px;
+}
+.no p{
+  text-align: center;
+    color: white;
+    font-size: 31px;
+    line-height: 27px;
+}

@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../css/greens.css">
+</head>
+
+<body>
+    <div class="hintNull" id="hintPagenull">
+        <div id="usOrpsnull">
+            搜索框不能为空
+        </div>
+    </div>
+    <div class="hintNulltwo" id="hintPagenulltwo">
+        <div id="usOrpsnulltwo">
+            输入框不能为空
+        </div>
+    </div>
+    <div class="hintNullthree" id="hintPagenullthree">
+        <div id="usOrpsnullthree">
+            请输入正确的数字
+        </div>
+    </div>
+    <div class="hintSuccess" id="hintPagesuccess">
+        <div id="usOrpssuccess">
+            修改成功
+        </div>
+     </div>
+    <div style="display: none;" id="disapper">
+
+    </div>
+    <div class="escLoad" onclick="escLoad()" id="next">
+        <img src="../image/login2.png" >
+    </div>
+    <div id="icon" >
+        <p href="#" class="closebtn" onclick="closeLoad()">关闭</p>
+        <div class="qqqq">
+            <a href="#" class="icon1" onclick="backLogin()">退出登录</a>
+        </div>
+       
+    </div>
+    <button class="add" style="color: rgb(36,172,242);" onclick="add()">添加菜品</button>
+    <div class="box">
+        <input type="text" autocomplete="off" class="input" placeholder="请输入您想搜索的食物名或描述" id="inin">
+        <!--placeholder是文本框中的提示文字-->
+        <input type="button" value="搜索" class="button" onclick="search()">
+    </div>
+    <ul id="nav">
+        <li><a href="#" class="ul-top" id="top1">菜名</a></li>
+        <li><a href="#" class="ul-top" id="top2">菜类型</a></li>
+        <li><a href="#" class="ul-top" id="top3">价格</a></li>
+        <li><a href="#" class="ul-top" id="top4">描述</a></li>
+        <li><a href="#" class="ul-top" id="top5">类型名称</a></li>
+        <span><a href="#" class="ul-top" id="top6">操作</a></span>
+    </ul>
+    <ul id="ul1" class="ul-down">
+        <span class="liSpan"></span>
+        <span class="liSpan"></span>
+        <span class="liSpan"></span>
+        <span class="liSpan"></span>
+        <span class="liSpan" style="display: none;"></span>
+        <button onclick="revise(event)" id="first">修改</button>
+        <button onclick="delete1()" id="second">删除</button>
+    </ul>
+    <div class="upupdate">
+        <p><span style="width: 203px;line-height: 42px;display: block;float: left;text-align: right;">菜名:</span><input
+                type="text" autocomplete="off" id="name" placeholder="菜名"></p>
+        <p><span style="width: 203px;line-height: 42px;display: block;float: left;text-align: right;">菜类型:</span> <input
+                type="text" autocomplete="off" id="typeid" placeholder="菜类型0:面,1:米,2:饮品,3:水果"></p>
+        <p><span style="width: 203px;line-height: 42px;display: block;float: left;text-align: right;">价格:</span> <input
+                type="text" autocomplete="off" id="price" placeholder="价格"></p>
+        <p><span style="width: 203px;line-height: 42px;display: block;float: left;text-align: right;">描述:</span> <input
+                type="text" autocomplete="off" id="desc" placeholder="描述"></p>
+        <p><span style="width: 203px;line-height: 42px;display: block;float: left;text-align: right;">类型名称:</span>
+            <input type="text" autocomplete="off" id="typename" placeholder="类型名称">
+        </p>
+        <p style="display: none;"><span
+                style="width: 203px;line-height: 42px;display: block;float: left;text-align: right;"></span> <input
+                type="text" autocomplete="off" id="id" placeholder="id" style="display: none;"></p>
+        <div class="buttonTwo">
+            <div class="buttonSure" onclick="yes()">确认</div>
+            <div class="buttonSure" onclick="no()">取消</div>
+        </div>
+    </div>
+    <div class="ada">
+        <p><span style="width: 203px;line-height: 42px;display: block;float: left;text-align: right;">菜名:</span><input
+                type="text" autocomplete="off" id="name1" placeholder="菜名"></p>
+        <p><span style="width: 203px;line-height: 42px;display: block;float: left;text-align: right;">菜类型:</span><input
+                type="text" autocomplete="off" id="typeid1" placeholder="菜类型0:面,1:米,2:饮品,3:水果"></p>
+        <p><span style="width: 203px;line-height: 42px;display: block;float: left;text-align: right;">价格:</span><input
+                type="text" autocomplete="off" id="price1" placeholder="价格"></p>
+        <p><span style="width: 203px;line-height: 42px;display: block;float: left;text-align: right;">描述:</span><input
+                type="text" autocomplete="off" id="desc1" placeholder="描述"></p>
+        <p><span style="width: 203px;line-height: 42px;display: block;float: left;text-align: right;">类型名称:</span><input
+                type="text" autocomplete="off" id="typename1" placeholder="类型名称"></p>
+        <div class="buttonTwo">
+            <div class="buttonSure" onclick="yesadd()">确认</div>
+            <div class="buttonSure" onclick="noadd()">取消</div>
+        </div>
+    </div>
+    <ul id="searchpage-top">
+        <li><a href="#" class="ul-top">菜名</a></li>
+        <li><a href="#" class="ul-top">菜类型</a></li>
+        <li><a href="#" class="ul-top">价格</a></li>
+        <li><a href="#" class="ul-top">描述</a></li>
+        <li><a href="#" class="ul-top">类型名称</a></li>
+    </ul>
+    <div id="searchpage">
+        <ul id="sea" class="ul-down">
+            <span class="liSpan"></span>
+            <span class="liSpan"></span>
+            <span class="liSpan"></span>
+            <span class="liSpan"></span>
+            <span class="liSpan"></span>
+            <span class="liSpan" style="display: none;"></span>
+        </ul>
+    </div>
+    <div class="shadeBox">
+
+    </div>
+    <button id="closepage" onclick="closepage()">关闭</button>
+
+    <span class="downWord">
+        一共<i id="sumPage">##</i>页&nbsp;&nbsp;&nbsp;&nbsp;每页有4条
+    </span>
+    <div id="change-button">
+        <div class="button-left" onclick="button(-1)" id="left">
+            <img src="../image/left.png" style="width: 30px;" height="30px; ">
+        </div>
+        <input class="button-center" value="1" type="button" id="inputOne">
+        <div class="button-right" onclick="button(1)" id="right">
+            <img src="../image/right.png" style="width: 30px;" height="30px; ">
+        </div>
+    </div>
+    <script src="https://cdn.bootcdn.net/ajax/libs/jquery/3.6.4/jquery.js"></script>
+    <script type="text/javascript" src="../js/greens.js"></script>
+</body>
+
+</html>
